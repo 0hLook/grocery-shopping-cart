@@ -16,7 +16,10 @@ const CartTab = () => {
     dispatch({ type: "cart/clear" }); // Dispatching a clear action directly.
   };
 
-  const totalCost = carts.reduce((total, item) => total + item.quantity * item.price, 0);
+  const totalCost = carts.reduce(
+    (total, item) => total + item.quantity * item.price,
+    0
+  );
 
   return (
     <div
@@ -32,7 +35,9 @@ const CartTab = () => {
         ))}
       </div>
       <div className="grid grid-cols-2 items-center">
-        <h4 className="p-5 text-white text-lg">Total: ${totalCost.toFixed(2)}</h4>
+        <h4 className="p-5 text-white text-lg">
+          Total: ${totalCost.toFixed(2)}
+        </h4>
         <button
           className="text-white bg-red-600 hover:bg-red-500 rounded-full px-4 py-2 text-center"
           onClick={handleClearCart}
@@ -41,7 +46,10 @@ const CartTab = () => {
         </button>
       </div>
       <div className="grid grid-cols-2">
-        <button className="bg-yellow-600 text-white" onClick={handleCloseTabCart}>
+        <button
+          className="bg-yellow-600 text-white"
+          onClick={handleCloseTabCart}
+        >
           CLOSE
         </button>
         <button className="bg-green-600 text-white">CHECKOUT</button>

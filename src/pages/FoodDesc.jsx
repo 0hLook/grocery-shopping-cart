@@ -11,24 +11,21 @@ const Detail = () => {
   const [detail, setDetail] = useState(null);
   const [quantity, setQuantity] = useState(1);
 
-  // Fetch product details based on slug
   useEffect(() => {
     const product = products.find((product) => product.slug === slug);
     if (product) {
       setDetail(product);
     } else {
-      navigate("/"); // Redirect to home if product not found
+      navigate("/");
     }
   }, [slug, navigate]);
 
-  // Handle quantity adjustment
   const updateQuantity = (type) => {
     setQuantity((prev) =>
       type === "decrement" ? Math.max(1, prev - 1) : prev + 1
     );
   };
 
-  // Add item to cart
   const handleAddToCart = () => {
     if (detail) {
       dispatch(
@@ -41,7 +38,7 @@ const Detail = () => {
     }
   };
 
-  // Render detail content
+
   const renderDetail = () => {
     if (!detail) return null;
     return (
