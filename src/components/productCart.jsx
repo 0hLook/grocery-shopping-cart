@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { addToCart } from "../stores/ShoppingCart";
-import iconCart from "../assets/iconCart.png";
+import iconCart from "../assets/IconCart.png";
 
 const ProductCart = ({ data }) => {
   const { id, name, price, image, slug } = data;
