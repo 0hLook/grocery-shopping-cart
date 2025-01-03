@@ -1,12 +1,9 @@
 {
-  "homepage": "https://0hlook.github.io/grocery-shopping-cart/",
   "name": "grocery-shopping-cart",
   "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

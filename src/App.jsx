@@ -5,14 +5,14 @@ import Detail from "./pages/FoodDesc";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <HashRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/:slug" element={<Detail />} />
         </Route>
       </Routes>
-    </HashRouter>
+    </BrowserRouter>
   );
 }
 
