@@ -25,7 +25,7 @@ export const products = [
         name: 'Chicken',
         price: 4.10,
         image: imageProduct3,
-        description: 'Are you a vegan who wants to build some strong muscle? If so, you have came to the right spot! We sell protein packed, mouth watering spinach to the highest quality! We will support your journey so you can be built like Dwayne Johnson one day!',
+        description: 'If you are wondering why the chicken did not cross the road, it got kidnapped so it can be your next protein rich meal! (We do not endorse kidnapping and murder)',
         slug: 'juicy-breasts'
     },
     {

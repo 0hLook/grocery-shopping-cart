@@ -32,7 +32,7 @@ const ProductCart = ({ data }) => {
       </h3>
       <div className="product-details mt-auto flex justify-between items-center border-t pt-3">
         <p className="product-price">
-          $<span className="text-2xl font-medium">{price}</span>
+          $<span className="text-2xl font-medium">{price.toFixed(2)}</span>
         </p>
         <button
           className="add-to-cart-btn bg-gray-300 p-2 rounded-md text-sm hover:bg-gray-400 flex gap-2"
