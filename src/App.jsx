@@ -5,7 +5,7 @@ import Detail from "./pages/FoodDesc";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
-    <BrowserRouter basename="/grocery-shopping-cart/">
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
