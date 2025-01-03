@@ -7,7 +7,7 @@ export const products = [
     {
         id: 1,
         name: 'Apple',
-        price: 0.99,
+        price: 0.39,
         image: imageProduct1,
         description: 'Discover the irresistible taste of Pink Lady Apples! It is bursting with a juicy sweetness and a delightful crunch. Perfect for making a drink, a healthy snack or your next flaming recipe idea! Take a bite into freshness today!',
         slug: 'burnice-reference-apples'
