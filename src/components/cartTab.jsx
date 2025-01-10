@@ -23,19 +23,19 @@ const CartTab = () => {
 
   return (
     <div
-      className={`fixed top-0 right-0 bg-gray-700 shadow-2xl w-96 h-full grid grid-rows-[60px_1fr_60px] 
+      className={`fixed top-0 right-0 bg-green-200 shadow-2xl w-96 h-full grid grid-rows-[60px_1fr_60px] 
     transform transition-transform duration-500
     ${statusTab === false ? "translate-x-full" : ""}
     `}
     >
-      <h2 className="p-5 text-white text-2xl">Shopping Cart</h2>
+      <h2 className="p-5 text-lime-500 font-bold text-2xl">Shopping Cart</h2>
       <div className="p-5">
         {carts.map((item, key) => (
           <CartItem key={key} data={item} />
         ))}
       </div>
       <div className="grid grid-cols-2 items-center">
-        <h4 className="p-5 text-white text-lg">
+        <h4 className="p-5 text-lime-500 font-bold text-lg">
           Total: ${totalCost.toFixed(2)}
         </h4>
         <button
@@ -47,12 +47,14 @@ const CartTab = () => {
       </div>
       <div className="grid grid-cols-2">
         <button
-          className="bg-yellow-600 text-white"
+          className="bg-yellow-600 text-white text-lg font-bold py-3 px-6 hover:bg-yellow-500"
           onClick={handleCloseTabCart}
         >
           CLOSE
         </button>
-        <button className="bg-green-600 text-white">CHECKOUT</button>
+        <button className="bg-green-600 text-white text-lg font-bold py-3 px-6 hover:bg-green-500">
+          CHECKOUT
+        </button>
       </div>
     </div>
   );

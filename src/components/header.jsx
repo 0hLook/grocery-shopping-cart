@@ -20,15 +20,15 @@ const Header = () => {
   };
   return (
     <header className="relative flex items-center mb-5">
-      <Link to="/" className="text-xl font-semibold flex items-center">
+      <Link to="/" className="text-xl text-lime-500 font-semibold flex items-center">
         <img src={HouseIcon} alt="Home" className="w-6 h-6 mr-2" />
         Home
       </Link>
-      <h1 className="text-3xl flex-1 text-center pr-12 font-bold">
+      <h1 className="text-3xl flex-1 text-center text-lime-500 pr-12 font-bold">
         We sell Uninflated Groceries!
       </h1>
       <div
-        className="w-10 h-10 bg-gray-100 rounded-full
+        className="w-10 h-10 bg-yellow-100 rounded-full
       flex justify-center items-center relative"
         onClick={handleOpenTabCart}
       >

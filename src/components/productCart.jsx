@@ -19,7 +19,7 @@ const ProductCart = ({ data }) => {
   };
 
   return (
-    <div className="product-cart bg-white p-5 rounded-xl shadow-sm flex flex-col">
+    <div className="product-cart bg-yellow-100 p-5 rounded-xl shadow-sm flex flex-col">
       <Link to={slug}>
         <img
           src={image}
@@ -27,15 +27,15 @@ const ProductCart = ({ data }) => {
           className="product-image w-full h-80 object-cover object-top"
         />
       </Link>
-      <h3 className="product-name text-2xl py-3 text-center font-medium">
+      <h3 className="product-name text-yellow-500 text-2xl py-3 text-center font-medium">
         {name}
       </h3>
       <div className="product-details mt-auto flex justify-between items-center border-t pt-3">
-        <p className="product-price">
-          $<span className="text-2xl font-medium">{price.toFixed(2)}</span>
+        <p className="product-price text-yellow-500">
+          $<span className="text-2xl text-yellow-500 font-medium">{price.toFixed(2)}</span>
         </p>
         <button
-          className="add-to-cart-btn bg-gray-300 p-2 rounded-md text-sm hover:bg-gray-400 flex gap-2"
+          className="add-to-cart-btn bg-lime-100 p-2 rounded-md text-sm hover:bg-lime-400 flex gap-2"
           onClick={handleAddToCart}
         >
           <img src={iconCart} alt="Add to cart" className="cart-icon w-5" />
