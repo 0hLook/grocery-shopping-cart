@@ -10,7 +10,7 @@ const Home = () => {
   const meats = products.filter((product) => product.category === "meats");
 
   return (
-    <main className="home-page">
+    <main className="pt-10 home-page">
       <header className="page-header">
       </header>
 

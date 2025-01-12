@@ -25,7 +25,7 @@ export const products = [
     {
         id: 3,
         name: 'Chicken',
-        price: 4.10,
+        price: 2.99,
         image: imageProduct3,
         description: 'If you are wondering why the chicken did not cross the road, it got kidnapped so it can be your next protein rich meal! (We do not endorse kidnapping and murder)',
         slug: 'juicy-breasts',
@@ -34,7 +34,7 @@ export const products = [
     {
         id: 4,
         name: 'Beef',
-        price: 10.99,
+        price: 4.99,
         image: imageProduct4,
         description: 'Savor the unparalleled flavor of premium beef sourced from Australia’s finest grass-fed cattle. Raised on lush and nutrient-rich pastures, these top quality Aussie cows are free to roam and graze! This ensures the most TENDER, SUCCULENT and richly marbled cuts bursting with natural (heavenly) goodness!',
         slug: 'kobe-beef',

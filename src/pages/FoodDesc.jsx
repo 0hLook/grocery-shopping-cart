@@ -12,6 +12,7 @@ const Detail = () => {
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const product = products.find((product) => product.slug === slug);
     if (product) {
       setDetail(product);
@@ -38,49 +39,65 @@ const Detail = () => {
     }
   };
 
-
   const renderDetail = () => {
     if (!detail) return null;
     return (
-      <div className="grid grid-cols-2 gap-5 mt-5">
-        <div>
-          <img src={detail.image} alt={detail.name} className="w-full" />
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-10 bg-green-50 p-10 shadow-md rounded-xl shadow-lg">
+        {/* Image Section */}
+        <div className="flex justify-center items-center bg-yellow-100 shadow-md p-5 rounded-xl">
+          <img
+            src={detail.image}
+            alt={detail.name}
+            className="w-full h-auto max-w-[300px] rounded-xl shadow-md"
+          />
         </div>
-        <div className="flex flex-col gap-5">
-          <h1 className="text-4xl uppercase font-bold">{detail.name}</h1>
-          <p className="font-bold text-3xl">${detail.price.toFixed(2)}</p>
-          <div className="flex gap-5">
-            <div className="flex gap-2 justify-center items-center">
+
+        {/* Details Section */}
+        <div className="flex flex-col gap-6">
+          <h1 className="text-5xl font-extrabold text-lime-600 uppercase">
+            {detail.name}
+          </h1>
+          <p className="text-3xl font-semibold text-green-800">
+            ${detail.price.toFixed(2)}
+          </p>
+          <div className="flex items-center gap-5">
+            <div className="flex gap-2 items-center bg-green-50 p-2 rounded-lg">
               <button
-                className="bg-gray-100 h-full w-10 font-bold text-xl rounded-xl flex justify-center items-center"
+                className="bg-lime-200 h-10 w-10 font-bold text-xl rounded-full flex justify-center items-center text-lime-800 hover:bg-lime-300"
                 onClick={() => updateQuantity("decrement")}
               >
                 -
               </button>
-              <span className="bg-gray-200 h-full w-10 font-bold text-xl rounded-xl flex justify-center items-center">
+              <span className="bg-lime-100 h-10 w-10 font-bold text-xl rounded-full flex justify-center items-center text-lime-800">
                 {quantity}
               </span>
               <button
-                className="bg-gray-100 h-full w-10 font-bold text-xl rounded-xl flex justify-center items-center"
+                className="bg-lime-200 h-10 w-10 font-bold text-xl rounded-full flex justify-center items-center text-lime-800 hover:bg-lime-300"
                 onClick={() => updateQuantity("increment")}
               >
                 +
               </button>
             </div>
             <button
-              className="bg-slate-900 text-white px-7 py-3 rounded-xl shadow-2xl"
+              className="bg-lime-500 text-white px-8 py-3 rounded-full shadow-lg hover:bg-lime-600"
               onClick={handleAddToCart}
             >
               Add To Cart
             </button>
           </div>
-          <p>{detail.description}</p>
+          <p className="text-green-700 text-lg leading-relaxed">
+            {detail.description}
+          </p>
         </div>
       </div>
     );
   };
 
-  return <div>{renderDetail()}</div>;
+  return (
+    <div className="min-h-screen bg-green-100 p-10">
+      {renderDetail()}
+    </div>
+  );
 };
 
 export default Detail;
