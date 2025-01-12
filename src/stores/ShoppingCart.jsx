@@ -39,7 +39,8 @@ const cartSlice = createSlice({
       state.statusTab = !state.statusTab;
     },
     clear(state) {
-      state.items = []; // Clears all cart items
+      state.items = [];
+      localStorage.removeItem("carts");
     },
   },
 });
